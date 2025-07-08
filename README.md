@@ -1,7 +1,9 @@
 # tcx_video_call
 
 
-
+在运行该项目前，需要将FlutterBoost.java中的FlutterMain.findAppBundlePath()改为FlutterInjector.instance().flutterLoader().findAppBundlePath()
+Flutter 版本 3.29.0
+java 版本 17
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.

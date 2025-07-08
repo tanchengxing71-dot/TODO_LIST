@@ -12,7 +12,7 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
     repositories {
         google()
         mavenCentral()
@@ -21,3 +21,11 @@ dependencyResolutionManagement {
 
 rootProject.name = "tcx_video_call"
 include ':app'
+
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+        settingsDir.parentFile,
+        'tcx_video_call_module/.android/include_flutter.groovy'
+))
+include ':tcx_video_call_module'
+project(':tcx_video_call_module').projectDir = new File('../tcx_video_call_module')

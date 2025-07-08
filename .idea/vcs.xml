@@ -2,5 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../tcx_video_call_module" vcs="Git" />
+    <mapping directory="$USER_HOME$/fvm/versions/3.29.0" vcs="Git" />
   </component>
 </project>

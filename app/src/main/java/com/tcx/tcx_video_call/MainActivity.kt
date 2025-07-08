@@ -9,15 +9,25 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
+import com.idlefish.flutterboost.FlutterBoostRouteOptions
+
+import com.idlefish.flutterboost.containers.FlutterBoostActivity
 import com.tcx.tcx_video_call.databinding.ActivityMainBinding
+import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 
 class MainActivity : AppCompatActivity() {
+
+    companion object {
+        const val PATH = "main"
+    }
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
@@ -29,9 +39,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
+            val intent = FlutterBoostActivity.CachedEngineIntentBuilder(FlutterBoostActivity::class.java)
+                .backgroundMode(FlutterActivityLaunchConfigs.BackgroundMode.opaque) // or transparent
+                .destroyEngineWithActivity(false)
+                .url("simplePage") // Flutter 页面对应的路由名
+                .urlParams(mapOf("data" to "tcx from native"))
+                .build(this) // this 是当前 Activity 或 Fragment 的 Context
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                .setAction("Action", null)
+//                .setAnchorView(R.id.fab).show()
+            startActivity(intent)
         }
     }
 

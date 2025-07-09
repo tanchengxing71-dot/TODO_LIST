@@ -1,0 +1,7 @@
+package com.tcx.tcx_video_call.base
+
+import androidx.lifecycle.ViewModel
+
+abstract class BaseViewModel : ViewModel() {
+    abstract fun initArgs(map: Map<String, Any?>)
+}

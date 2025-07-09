@@ -1,44 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.tcx.tcx_video_call.main.MainViewmodel" />
+    </data>
+
+    <LinearLayout
 
 
-    <View
+
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/button_jump_complex"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="jump complex page" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
 
-    <Button
-        android:id="@+id/button_jump_simple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="jump simple page" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-    <TextView
-        android:id="@+id/text_data_source"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxLines="2"
-        android:text="没有消息来源"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="3" />
-</LinearLayout>
+        <Button
+            android:id="@+id/button_jump_complex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jump complex page" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/button_jump_simple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="jump simple page" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+        <TextView
+            android:id="@+id/text_data_source"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@{viewModel.message}"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+    </LinearLayout>
+
+</layout>

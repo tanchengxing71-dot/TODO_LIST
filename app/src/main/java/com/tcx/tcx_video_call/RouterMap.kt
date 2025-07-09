@@ -4,16 +4,19 @@ import android.app.Activity
 import android.app.Application
 import android.content.Intent
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.idlefish.flutterboost.FlutterBoost
 import com.idlefish.flutterboost.FlutterBoostDelegate
 import com.idlefish.flutterboost.FlutterBoostRouteOptions
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
-import io.flutter.Log
+import com.tcx.tcx_video_call.main.MainActivity
 import io.flutter.embedding.android.FlutterActivityLaunchConfigs
+import io.flutter.embedding.engine.FlutterEngine
+import io.flutter.embedding.engine.dart.DartExecutor
+import java.io.Serializable
+
 
 object RouterMap{
-    val origin = Const.scheme+ Const.host
+    val origin = Const.ORIGIN
 
     val routerMaps = mapOf<String, Class<out Activity>>(
         origin + MainActivity.PATH to MainActivity::class.java,
@@ -24,17 +27,25 @@ object RouterMap{
     }
 
     fun setupFlutterBoost(app: Application){
-        Log.d("FlutterBoostTcx", "成功注册我的FlutterBoost路由")
+
         FlutterBoost.instance().setup(app, object : FlutterBoostDelegate {
             override fun pushNativeRoute(options: FlutterBoostRouteOptions) {
                 val context = FlutterBoost.instance().currentActivity() ?: return
                 val target = resolveActivityByPath(options.pageName())
+
                 if(target == null) {
                     Toast.makeText(context, "找不到对应的原生页面: ${options.pageName()}", Toast.LENGTH_SHORT).show()
                     return
                 }
-                val intent = Intent(context, target)
-                context.startActivityForResult(intent, options.requestCode())
+                val args = options.arguments() as Map<String, Any?>
+                val serializableMap = HashMap<String, Any?>().apply { putAll(args) }
+
+                val intent = Intent(context, target).apply {
+                    putExtra("args", serializableMap as Serializable)
+                }
+
+
+                context.startActivity(intent)
             }
 
             override fun pushFlutterRoute(options: FlutterBoostRouteOptions) {
@@ -49,6 +60,7 @@ object RouterMap{
                 context.startActivity(intent)
             }
         }) { engine ->
+
             // FlutterEngine 配置
         }
     }

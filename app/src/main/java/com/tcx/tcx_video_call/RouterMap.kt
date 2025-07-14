@@ -8,18 +8,17 @@ import com.idlefish.flutterboost.FlutterBoost
 import com.idlefish.flutterboost.FlutterBoostDelegate
 import com.idlefish.flutterboost.FlutterBoostRouteOptions
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
+import com.tcx.tcx_video_call.channel.UtilsChannel
 import com.tcx.tcx_video_call.main.MainActivity
 import io.flutter.embedding.android.FlutterActivityLaunchConfigs
-import io.flutter.embedding.engine.FlutterEngine
-import io.flutter.embedding.engine.dart.DartExecutor
 import java.io.Serializable
 
 
 object RouterMap{
-    val origin = Const.ORIGIN
+    const val ORIGIN = Const.ORIGIN
 
     val routerMaps = mapOf<String, Class<out Activity>>(
-        origin + MainActivity.PATH to MainActivity::class.java,
+        ORIGIN + MainActivity.PATH to MainActivity::class.java,
     )
 
     fun resolveActivityByPath(path: String): Class<out Activity>? {
@@ -60,8 +59,7 @@ object RouterMap{
                 context.startActivity(intent)
             }
         }) { engine ->
-
-            // FlutterEngine 配置
+            UtilsChannel.register(app,engine)
         }
     }
 

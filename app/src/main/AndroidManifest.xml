@@ -14,10 +14,10 @@
         android:theme="@style/Theme.Tcx_video_call"
         tools:targetApi="31">
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.FlutterMainActivity"
             android:launchMode="standard"
             android:exported="true"
-            android:theme="@style/Theme.Tcx_video_call">
+            android:theme="@style/AppTheme.StartStyle">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,6 +32,10 @@
             android:windowSoftInputMode="adjustResize" >
 
         </activity>
+        <activity
+            android:name=".main.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Tcx_video_call" />
         <meta-data android:name="flutterEmbedding"
             android:value="2">
         </meta-data>

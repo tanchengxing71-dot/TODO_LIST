@@ -8,6 +8,7 @@ object Const{
     const val ORIGIN = "$SCHEME://$HOST"
 
     const val UTILS_CHANNEL_NAME = "Tcx.utils"
+    const val API_CHANNEL_NAME = "Tcx.api"
 
     const val SIMPLE_PAGE = "/pages/simplePage"
     const val COMPLEX_PAGE = "/pages/complexPage"

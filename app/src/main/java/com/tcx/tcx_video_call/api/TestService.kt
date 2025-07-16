@@ -11,7 +11,6 @@ interface TestService {
     @POST("query")
     @Headers(
         "Need-Token: false",
-        "Content-Type-Override: application/x-www-form-urlencoded"
     )
     suspend fun test(
         @Field("key") key: String,

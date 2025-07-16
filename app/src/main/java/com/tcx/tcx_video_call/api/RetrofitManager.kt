@@ -22,12 +22,14 @@ object RetrofitManager {
         val headerInterceptor = Interceptor { chain ->
             val original = chain.request()
             val needToken = original.header("Need-Token")?.toBoolean() ?: false
-            val contentTypeOverride = original.header("Content-Type-Override") ?: "application/json"
+            val hasContentType = original.header("Content-Type") != null
 
             val builder = original.newBuilder()
-                .removeHeader("Need-Token")
-                .removeHeader("Content-Type-Override")
-                .addHeader("Content-Type", contentTypeOverride)
+            builder.removeHeader("Need-Token")
+
+            if (!hasContentType) {
+                builder.addHeader("Content-Type", "application/json")
+            }
 
             if (needToken) {
                 val token = tokenMap[key]

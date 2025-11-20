@@ -19,13 +19,12 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "tcx_video_call"
+rootProject.name = "tcx_base"
 include ':app'
 
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
-        settingsDir.parentFile,
-        'tcx_video_call_module/.android/include_flutter.groovy'
+        settingsDir,
+        '../BASE_Flutter/.android/include_flutter.groovy'
 ))
-include ':tcx_video_call_module'
-project(':tcx_video_call_module').projectDir = new File('../tcx_video_call_module')
+

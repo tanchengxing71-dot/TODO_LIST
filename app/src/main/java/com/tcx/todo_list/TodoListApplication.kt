@@ -1,11 +1,11 @@
-package com.tcx.tcx_base
+package com.tcx.todo_list
 
 import android.app.Application
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
 
-class BaseApplication : Application() {
+class TodoListApplication : Application() {
     lateinit var flutterEngine : FlutterEngine
     override fun onCreate() {
         super.onCreate()

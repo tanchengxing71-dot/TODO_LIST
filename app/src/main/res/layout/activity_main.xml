@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.tcx.tcx_base.main.MainViewmodel" />
+            type="com.tcx.todo_list.main.MainViewmodel" />
     </data>
 
     <LinearLayout

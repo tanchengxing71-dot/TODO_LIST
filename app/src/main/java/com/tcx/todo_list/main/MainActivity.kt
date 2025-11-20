@@ -1,11 +1,11 @@
-package com.tcx.tcx_base.main
+package com.tcx.todo_list.main
 
 import android.os.Bundle
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
-import com.tcx.tcx_base.Const
-import com.tcx.tcx_base.R
-import com.tcx.tcx_base.base.BaseActivity
-import com.tcx.tcx_base.databinding.ActivityMainBinding
+import com.tcx.todo_list.Const
+import com.tcx.todo_list.R
+import com.tcx.todo_list.base.BaseActivity
+import com.tcx.todo_list.databinding.ActivityMainBinding
 import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 
 class MainActivity : BaseActivity<MainViewmodel, ActivityMainBinding>() {

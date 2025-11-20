@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.tcx.tcx_base'
+    namespace 'com.tcx.todo_list'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.tcx.tcx_base"
+        applicationId "com.tcx.todo_list"
         minSdk 24
         targetSdk 35
         versionCode 1

@@ -1,4 +1,4 @@
-package com.tcx.tcx_base.model
+package com.tcx.todo_list.model
 
 data class TestRequest(
     val key: String,

@@ -1,10 +1,10 @@
-package com.tcx.tcx_base.main
+package com.tcx.todo_list.main
 
 import android.content.Context
 import android.os.Bundle
 import androidx.core.content.edit
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
-import com.tcx.tcx_base.Const
+import com.tcx.todo_list.Const
 
 class FlutterMainActivity : FlutterBoostActivity() {
 

@@ -19,12 +19,12 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "tcx_base"
+rootProject.name = "todo_list"
 include ':app'
 
 setBinding(new Binding([gradle: this]))
 evaluate(new File(
         settingsDir,
-        '../BASE_Flutter/.android/include_flutter.groovy'
+        '../TODO_LIST_Module/.android/include_flutter.groovy'
 ))
 

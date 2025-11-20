@@ -1,7 +1,7 @@
-package com.tcx.tcx_base.main
+package com.tcx.todo_list.main
 
 import androidx.lifecycle.MutableLiveData
-import com.tcx.tcx_base.base.BaseViewModel
+import com.tcx.todo_list.base.BaseViewModel
 
 class MainViewmodel : BaseViewModel() {
     var message = MutableLiveData<String>("没有消息来源")

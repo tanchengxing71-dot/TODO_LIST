@@ -1,7 +1,7 @@
-package com.tcx.tcx_video_call.main
+package com.tcx.tcx_base.main
 
 import androidx.lifecycle.MutableLiveData
-import com.tcx.tcx_video_call.base.BaseViewModel
+import com.tcx.tcx_base.base.BaseViewModel
 
 class MainViewmodel : BaseViewModel() {
     var message = MutableLiveData<String>("没有消息来源")

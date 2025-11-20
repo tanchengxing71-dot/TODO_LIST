@@ -1,4 +1,4 @@
-package com.tcx.tcx_video_call.api
+package com.tcx.tcx_base.api
 
 import retrofit2.Response
 import retrofit2.http.Field

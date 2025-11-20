@@ -1,4 +1,4 @@
-package com.tcx.tcx_video_call.model
+package com.tcx.tcx_base.model
 
 data class TestRequest(
     val key: String,

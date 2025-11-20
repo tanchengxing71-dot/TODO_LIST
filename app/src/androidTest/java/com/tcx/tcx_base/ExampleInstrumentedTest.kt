@@ -1,4 +1,4 @@
-package com.tcx.tcx_video_call
+package com.tcx.tcx_base
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

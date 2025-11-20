@@ -1,10 +1,10 @@
-package com.tcx.tcx_video_call.main
+package com.tcx.tcx_base.main
 
 import android.content.Context
 import android.os.Bundle
 import androidx.core.content.edit
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
-import com.tcx.tcx_video_call.Const
+import com.tcx.tcx_base.Const
 
 class FlutterMainActivity : FlutterBoostActivity() {
 

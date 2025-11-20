@@ -1,4 +1,4 @@
-package com.tcx.tcx_video_call.base
+package com.tcx.tcx_base.base
 
 import androidx.lifecycle.ViewModel
 

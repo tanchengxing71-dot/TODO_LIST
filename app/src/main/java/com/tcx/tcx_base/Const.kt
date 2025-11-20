@@ -1,7 +1,6 @@
-package com.tcx.tcx_video_call
+package com.tcx.tcx_base
 
 import android.content.Context
-import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 
 

@@ -1,11 +1,11 @@
-package com.tcx.tcx_video_call
+package com.tcx.tcx_base
 
 import android.app.Application
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.embedding.engine.FlutterEngineCache
 import io.flutter.embedding.engine.dart.DartExecutor
 
-class VideoCallApplication : Application() {
+class BaseApplication : Application() {
     lateinit var flutterEngine : FlutterEngine
     override fun onCreate() {
         super.onCreate()

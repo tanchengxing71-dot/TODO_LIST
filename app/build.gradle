@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.tcx.tcx_video_call'
+    namespace 'com.tcx.tcx_base'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.tcx.tcx_video_call"
+        applicationId "com.tcx.tcx_base"
         minSdk 24
         targetSdk 35
         versionCode 1

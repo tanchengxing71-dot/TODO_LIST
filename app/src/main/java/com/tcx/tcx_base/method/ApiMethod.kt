@@ -1,8 +1,8 @@
-package com.tcx.tcx_video_call.method
+package com.tcx.tcx_base.method
 
 import android.util.Log
-import com.tcx.tcx_video_call.MethodHandler
-import com.tcx.tcx_video_call.api.Api
+import com.tcx.tcx_base.MethodHandler
+import com.tcx.tcx_base.api.Api
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

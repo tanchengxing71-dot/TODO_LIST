@@ -1,4 +1,4 @@
-package com.tcx.tcx_video_call
+package com.tcx.tcx_base
 
 import android.app.Activity
 import android.app.Application
@@ -8,9 +8,9 @@ import com.idlefish.flutterboost.FlutterBoost
 import com.idlefish.flutterboost.FlutterBoostDelegate
 import com.idlefish.flutterboost.FlutterBoostRouteOptions
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
-import com.tcx.tcx_video_call.channel.ApiChannel
-import com.tcx.tcx_video_call.channel.UtilsChannel
-import com.tcx.tcx_video_call.main.MainActivity
+import com.tcx.tcx_base.channel.ApiChannel
+import com.tcx.tcx_base.channel.UtilsChannel
+import com.tcx.tcx_base.main.MainActivity
 import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 import java.io.Serializable
 

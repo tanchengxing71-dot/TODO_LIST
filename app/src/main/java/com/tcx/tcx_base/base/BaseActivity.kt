@@ -1,11 +1,11 @@
-package com.tcx.tcx_video_call.base
+package com.tcx.tcx_base.base
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModelProvider
-import com.tcx.tcx_video_call.BR
+import com.tcx.tcx_base.BR
 import io.flutter.Log
 
 abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding> : AppCompatActivity() {

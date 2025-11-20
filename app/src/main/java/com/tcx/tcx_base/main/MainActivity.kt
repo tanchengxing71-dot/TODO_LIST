@@ -1,12 +1,11 @@
-package com.tcx.tcx_video_call.main
+package com.tcx.tcx_base.main
 
 import android.os.Bundle
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
-import com.tcx.tcx_video_call.Const
-import com.tcx.tcx_video_call.main.MainViewmodel
-import com.tcx.tcx_video_call.R
-import com.tcx.tcx_video_call.base.BaseActivity
-import com.tcx.tcx_video_call.databinding.ActivityMainBinding
+import com.tcx.tcx_base.Const
+import com.tcx.tcx_base.R
+import com.tcx.tcx_base.base.BaseActivity
+import com.tcx.tcx_base.databinding.ActivityMainBinding
 import io.flutter.embedding.android.FlutterActivityLaunchConfigs
 
 class MainActivity : BaseActivity<MainViewmodel, ActivityMainBinding>() {

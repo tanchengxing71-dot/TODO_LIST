@@ -1,4 +1,4 @@
-package com.tcx.tcx_video_call
+package com.tcx.tcx_base
 
 import org.junit.Test
 

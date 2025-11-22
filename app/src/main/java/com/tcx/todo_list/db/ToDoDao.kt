@@ -13,17 +13,17 @@ interface ToDoDao {
 
     // 改
     @Update
-    suspend fun update(user: ToDo)
+    suspend fun update(user: ToDo): Long
 
     // 删
     @Delete
-    suspend fun delete(user: ToDo)
+    suspend fun delete(user: ToDo): Long
 
     // 查所有
     @Query("SELECT * FROM todo")
-    suspend fun getAllUsers(): List<ToDo>
+    suspend fun getAll(): List<ToDo>
 
     // 条件查询
     @Query("SELECT * FROM todo WHERE type = :type")
-    suspend fun getUserById(type: Int): ToDo?
+    suspend fun getByType(type: Int): List<ToDo>
 }

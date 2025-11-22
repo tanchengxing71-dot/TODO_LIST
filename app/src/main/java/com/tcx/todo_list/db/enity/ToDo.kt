@@ -3,6 +3,7 @@ package com.tcx.todo_list.db.enity
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
+@kotlinx.serialization.Serializable
 @Entity(tableName = "todo")
 data class ToDo(
     @PrimaryKey(autoGenerate = true)

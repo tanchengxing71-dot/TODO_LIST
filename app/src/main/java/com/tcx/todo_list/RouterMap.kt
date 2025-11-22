@@ -9,6 +9,7 @@ import com.idlefish.flutterboost.FlutterBoostDelegate
 import com.idlefish.flutterboost.FlutterBoostRouteOptions
 import com.idlefish.flutterboost.containers.FlutterBoostActivity
 import com.tcx.todo_list.channel.ApiChannel
+import com.tcx.todo_list.channel.TodoChannel
 import com.tcx.todo_list.channel.UtilsChannel
 import com.tcx.todo_list.main.MainActivity
 import io.flutter.embedding.android.FlutterActivityLaunchConfigs
@@ -62,6 +63,7 @@ object RouterMap{
         }) { engine ->
             UtilsChannel.register(app,engine)
             ApiChannel.register(app,engine)
+            TodoChannel.register(app,engine)
         }
     }
 

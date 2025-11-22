@@ -5,5 +5,5 @@ import com.tcx.todo_list.db.enity.ToDo
 
 @Database(entities = [ToDo::class], version = 1)
 abstract class AppDatabase : RoomDatabase() {
-    abstract fun todoDao(): ToDo
+    abstract fun todoDao(): ToDoDao
 }

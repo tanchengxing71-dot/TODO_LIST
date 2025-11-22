@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     id 'kotlin-kapt'
+    id "org.jetbrains.kotlin.plugin.serialization" version "2.2.21"
+
 }
 
 android {
@@ -63,9 +65,14 @@ dependencies {
 
     def roomVersion = "2.6.1"
 
-    implementation "androidx.room:room-runtime:$roomVersion"
-    implementation "androidx.room:room-ktx:$roomVersion"
+    implementation libs.androidx.room.runtime
+    implementation libs.androidx.room.ktx
     kapt "androidx.room:room-compiler:$roomVersion"
+
+    //序列化
+
+    implementation(libs.kotlinx.serialization.json)
+
 
 
 }

@@ -19,7 +19,7 @@ import kotlinx.coroutines.withContext
 
 object TodoChannel {
 
-    private const val CHANNEL_NAME = Const.API_CHANNEL_NAME
+    private const val CHANNEL_NAME = Const.TODO_CHANNEL_NAME
     const val INSERT_TODO = "insert_todo"
     const val DELETE_TODO = "delete_todo"
     const val QUERY_ALL_TODO = "query_todo"

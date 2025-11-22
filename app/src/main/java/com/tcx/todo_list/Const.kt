@@ -17,6 +17,8 @@ object Const{
     const val UTILS_CHANNEL_NAME = "Tcx.utils"
     const val API_CHANNEL_NAME = "Tcx.api"
 
+    const val TODO_CHANNEL_NAME = "Tcx.todo"
+
     const val SIMPLE_PAGE = "/pages/simplePage"
     const val COMPLEX_PAGE = "/pages/complexPage"
 

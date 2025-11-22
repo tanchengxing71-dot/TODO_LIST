@@ -5,6 +5,7 @@ import android.widget.Toast
 import com.tcx.todo_list.MethodHandler
 import com.tcx.todo_list.db.DatabaseManager
 import com.tcx.todo_list.db.enity.ToDo
+import com.tcx.todo_list.db.enity.toToDo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlinx.serialization.builtins.ListSerializer
@@ -16,9 +17,9 @@ object TodoMethod {
      * 插入 ToDo
      */
     val insertToDoHandler: MethodHandler = { args, result, context ->
-        val json = Json.encodeToString(args)
-        val todo = Json.decodeFromString<ToDo>(json)
 
+
+        val todo = args.toToDo()
         val rowId = DatabaseManager.getDb().todoDao().insert(todo)
 
         withContext(Dispatchers.Main) {
@@ -36,9 +37,8 @@ object TodoMethod {
      * 更新 ToDo
      * 必须传入 id，否则无法更新
      */
-    val updateToDoHandler: MethodHandler = { args, _, context ->
-        val json = Json.encodeToString(args)
-        val todo = Json.decodeFromString<ToDo>(json)
+    val updateToDoHandler: MethodHandler = { args, result, context ->
+        val todo = args.toToDo()
 
         val rows = DatabaseManager.getDb().todoDao().update(todo)
 
@@ -48,6 +48,7 @@ object TodoMethod {
             } else {
                 Toast.makeText(context, "Update Failed", Toast.LENGTH_SHORT).show()
             }
+            result?.success(rows)
             Log.d("tcx_test_update", "args=$args rows=$rows")
         }
     }
@@ -57,8 +58,7 @@ object TodoMethod {
      * 删除 ToDo
      */
     val deleteToDoHandler: MethodHandler = { args, result, context ->
-        val json = Json.encodeToString(args)
-        val todo = Json.decodeFromString<ToDo>(json)
+        val todo = args.toToDo()
 
         val rows = DatabaseManager.getDb().todoDao().delete(todo)
 
@@ -93,7 +93,7 @@ object TodoMethod {
      * 按类型查询，例如 0-工作 1-学习 2-生活
      */
     val queryToDoByTypeHandler: MethodHandler = { args, result, context ->
-        val type = args.toString().toInt()
+        val type = args["type"] as Int
 
         val list = DatabaseManager.getDb().todoDao().getByType(type)
 

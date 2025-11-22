@@ -11,15 +11,15 @@ import com.tcx.todo_list.db.enity.ToDo
 interface ToDoDao {
     // 增
     @Insert
-    suspend fun insert(user: ToDo): Long
+    suspend fun insert(todo: ToDo): Long
 
     // 改
     @Update
-    suspend fun update(user: ToDo): Int
+    suspend fun update(todo: ToDo): Int
 
     // 删
     @Delete
-    suspend fun delete(user: ToDo): Int
+    suspend fun delete(todo: ToDo): Int
 
     // 查所有
     @Query("SELECT * FROM todo")

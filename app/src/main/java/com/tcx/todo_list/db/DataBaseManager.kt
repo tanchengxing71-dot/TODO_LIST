@@ -12,7 +12,8 @@ object DatabaseManager {
                 context.applicationContext,
                 AppDatabase::class.java,
                 "todo.db"
-            ).build()
+            ).fallbackToDestructiveMigration(false)
+                .build()
         }
     }
 

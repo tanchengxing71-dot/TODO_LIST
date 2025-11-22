@@ -1,11 +1,13 @@
 package com.tcx.todo_list.db
 
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Update
 import com.tcx.todo_list.db.enity.ToDo
 
+@Dao
 interface ToDoDao {
     // 增
     @Insert
@@ -13,11 +15,11 @@ interface ToDoDao {
 
     // 改
     @Update
-    suspend fun update(user: ToDo): Long
+    suspend fun update(user: ToDo): Int
 
     // 删
     @Delete
-    suspend fun delete(user: ToDo): Long
+    suspend fun delete(user: ToDo): Int
 
     // 查所有
     @Query("SELECT * FROM todo")

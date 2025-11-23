@@ -17,31 +17,16 @@
         android:gravity="center">
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3" />
-
-        <Button
-            android:id="@+id/button_jump_complex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="jump complex page" />
 
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
-
         <Button
-            android:id="@+id/button_jump_simple"
+            android:id="@+id/button_jump_todo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="jump simple page" />
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:text="jump TodoList page" />
         <TextView
             android:id="@+id/text_data_source"
             android:layout_width="wrap_content"
@@ -51,7 +36,7 @@
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="3" />
+            android:layout_weight="1" />
     </LinearLayout>
 
 </layout>

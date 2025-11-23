@@ -15,15 +15,15 @@
         android:theme="@style/Theme.Tcx_video_call"
         tools:targetApi="31">
         <activity
-            android:name=".main.FlutterMainActivity"
-            android:launchMode="standard"
+            android:name=".main.MainActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.StartStyle">
+            android:theme="@style/Theme.Tcx_video_call">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name="com.idlefish.flutterboost.containers.FlutterBoostActivity"
@@ -34,9 +34,11 @@
 
         </activity>
         <activity
-            android:name=".main.MainActivity"
+            android:name=".main.FlutterMainActivity"
+            android:launchMode="standard"
             android:exported="true"
-            android:theme="@style/Theme.Tcx_video_call" />
+            android:theme="@style/AppTheme.StartStyle">
+        </activity>
         <meta-data android:name="flutterEmbedding"
             android:value="2">
         </meta-data>

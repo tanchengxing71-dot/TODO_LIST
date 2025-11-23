@@ -21,5 +21,6 @@ object Const{
 
     const val SIMPLE_PAGE = "/pages/simplePage"
     const val COMPLEX_PAGE = "/pages/complexPage"
+    const val TODO_LIST_PAGE = "/pages/todoListPage"
 
 }

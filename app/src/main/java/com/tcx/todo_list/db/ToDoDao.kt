@@ -22,10 +22,10 @@ interface ToDoDao {
     suspend fun delete(todo: ToDo): Int
 
     // 查所有
-    @Query("SELECT * FROM todo")
+    @Query("SELECT * FROM todo ORDER BY time ASC")
     suspend fun getAll(): List<ToDo>
 
     // 条件查询
-    @Query("SELECT * FROM todo WHERE type = :type")
+    @Query("SELECT * FROM todo WHERE type = :type ORDER BY time ASC")
     suspend fun getByType(type: Int): List<ToDo>
 }
